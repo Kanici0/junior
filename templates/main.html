@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продвинутый шаблон</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт</h1>
+    </header>
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Услуги</a>
+        <a href="#">Контакты</a>
+    </nav>
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>Карточка 1</h2>
+                <p>Описание карточки 1. Вы можете изменить этот текст по своему усмотрению.</p>
+            </div>
+            <div class="card">
+                <h2>Карточка 2</h2>
+                <p>Описание карточки 2. Вы можете изменить этот текст по своему усмотрению.</p>
+            </div>
+            <div class="card">
+                <h2>Карточка 3</h2>
+                <p>Описание карточки 3. Вы можете изменить этот текст по своему усмотрению.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Мой сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
