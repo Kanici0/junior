@@ -24,6 +24,6 @@ urlpatterns = [
 
 
     path('posts/',post_list_view),
-    path('posts/<int:post_id>',post_detail_view),
+    path('posts/<int:post_id>/',post_detail_view),
 
 ]
