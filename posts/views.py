@@ -1,15 +1,22 @@
 from django.shortcuts import render , HttpResponse
 import random
 
+from posts.models import Post
+
+
 def test_view(request):
     return HttpResponse(f"Hello Country{random.randint(1,100)}")
 
-
-
 def html_view(request):
     return render(request,'main.html')
-def text_response_view(request):
-    return HttpResponse("Это текстовый ответ")
-def html_template_view(request):
-    return render(request, 'myapp/template.html')
 
+
+
+def post_list_view(request):
+    posts = Post.objects.all()
+    return render(request, "posts/post_list.html", context={"posts": posts})
+
+
+def post_detail_view(request, post_id):
+    post = Post.objects.get(id=post_id)
+    return render(request, "posts/post_detail.html", context={"post": post})
